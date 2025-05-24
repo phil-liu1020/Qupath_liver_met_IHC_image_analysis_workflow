@@ -2,11 +2,11 @@ import qupath.lib.objects.PathDetectionObject
 import qupath.lib.projects.ProjectImageEntry
 import qupath.lib.gui.scripting.QPEx
 
-// Output directory
+// Creates an output directory named "Detection_level_data"where exported measurements are saved.
 def outputDir = buildFilePath(PROJECT_BASE_DIR, 'Detection_level_data')
 mkdirs(outputDir)
 
-// Columns to export
+// Define which measurements you would like to export.
 def columnsToInclude = [
     "Detection Classification", "Grandparent Annotation ID", "Parent Annotation ID",
     "Parent Annotation Class", "Signed distance to annotation with Tumor µm","Centroid X µm","Centroid Y µm"
